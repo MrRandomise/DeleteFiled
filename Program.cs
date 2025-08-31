@@ -2,13 +2,21 @@
 {
     static void Main(string[] args)
     {
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+        Console.InputEncoding = System.Text.Encoding.UTF8;
+
+        // 1. Получаем путь к папке от пользователя
+        Console.WriteLine("Введите полный путь к фалу со списком:");
+        string configFilePath = Console.ReadLine();
         // --- НАСТРОЙКА ---
         // Путь к файлу, в котором перечислены имена файлов для удаления.
-        string configFilePath = @"C:\Users\dmitr\OneDrive\Desktop\DataSet\DataSet\deleteFiles.txt";
+        configFilePath = configFilePath+ "\\deleteFiles.txt";
 
         // Путь к папке, в которой нужно искать и удалять файлы.
-        string targetDirectoryPath = @"C:\Users\dmitr\OneDrive\Desktop\DataSet\DataSet\Images";
+        Console.WriteLine("Введите полный путь к папке с изображениямии:");
+        string targetDirectoryPath = Console.ReadLine();
         // -----------------
+
 
         Console.WriteLine("Запуск программы удаления файлов...");
 
@@ -66,8 +74,7 @@
         foreach (string filePath in Directory.EnumerateFiles(targetDirectoryPath))
         {
             // Получаем только имя файла из полного пути
-            string fileName = Path.GetFileName(filePath);
-
+            string fileName = Path.GetFileNameWithoutExtension(Path.GetFileName(filePath));
             // Проверяем, есть ли это имя в нашем списке на удаление
             if (filesToDelete.Contains(fileName))
             {

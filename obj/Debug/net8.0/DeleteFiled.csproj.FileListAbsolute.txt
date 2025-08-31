@@ -12,3 +12,4 @@ E:\Programming\DeleteFiled\obj\Debug\net8.0\refint\DeleteFiled.dll
 E:\Programming\DeleteFiled\obj\Debug\net8.0\DeleteFiled.pdb
 E:\Programming\DeleteFiled\obj\Debug\net8.0\DeleteFiled.genruntimeconfig.cache
 E:\Programming\DeleteFiled\obj\Debug\net8.0\ref\DeleteFiled.dll
+E:\Programming\DeleteFiled\obj\Debug\net8.0\DeleteFiled.sourcelink.json
